@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -16,10 +17,17 @@
 
     /* Light mode */
     @media (prefers-color-scheme: light) {
-      :root { --bg:#f6f8fb; --fg:#1a1f2b; --muted:#546175; --card:#ffffff; --accent:#2f7cff; }
+      :root {
+        --bg: #f6f8fb;
+        --fg: #1a1f2b;
+        --muted: #546175;
+        --card: #ffffff;
+        --accent: #2f7cff;
+      }
     }
 
-    html, body {
+    html,
+    body {
       height: 100%;
       margin: 0;
       background: var(--bg);
@@ -31,7 +39,8 @@
 
     /* Center the content both horizontally and vertically */
     .page {
-      min-height: 100svh; /* safe viewport for mobile toolbars */
+      min-height: 100svh;
+      /* safe viewport for mobile toolbars */
       display: flex;
       align-items: center;
       justify-content: center;
@@ -39,10 +48,11 @@
     }
 
     .card {
-      width: min(900px, 100%); /* scale to full width on mobile */
+      width: min(900px, 100%);
+      /* scale to full width on mobile */
       background: var(--card);
       border-radius: var(--radius);
-      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .25);
       padding: clamp(18px, 3vw, 40px);
     }
 
@@ -64,12 +74,16 @@
       line-height: 1.3;
     }
 
-    p { margin: 0 0 .8rem; }
+    p {
+      margin: 0 0 .8rem;
+    }
 
-    ul { margin: .2rem 0 .8rem 1.25rem; }
+    ul {
+      margin: .2rem 0 .8rem 1.25rem;
+    }
 
     .pill {
-      display:inline-block;
+      display: inline-block;
       font-size: .9em;
       padding: .25rem .6rem;
       border-radius: 999px;
@@ -84,50 +98,76 @@
     }
 
     @media (min-width: 820px) {
-      .grid { grid-template-columns: 1fr 1fr; }
+      .grid {
+        grid-template-columns: 1fr 1fr;
+      }
     }
 
-    .section { border-top: 1px solid color-mix(in oklab, var(--fg) 12%, transparent); padding-top: .9rem; }
+    .section {
+      border-top: 1px solid color-mix(in oklab, var(--fg) 12%, transparent);
+      padding-top: .9rem;
+    }
 
-    .muted { color: var(--muted); }
+    .muted {
+      color: var(--muted);
+    }
 
     /* Print-friendly: centers content and uses page breaks if needed */
     @media print {
-      body { background: white; }
-      .page { min-height: auto; padding: 0; }
-      .card { box-shadow: none; border: 1px solid #ccc; }
-      h2, p, li { break-inside: avoid; }
+      body {
+        background: white;
+      }
+
+      .page {
+        min-height: auto;
+        padding: 0;
+      }
+
+      .card {
+        box-shadow: none;
+        border: 1px solid #ccc;
+      }
+
+      h2,
+      p,
+      li {
+        break-inside: avoid;
+      }
     }
   </style>
 </head>
+
 <body>
   <main class="page">
     <article class="card" role="article" aria-label="Mnookin Two‑Pager">
       <header>
-        <h1>Mnookin Two‑Pager</h1>
-        <p class="muted">Centered on all screens • Scales to full width on mobile</p>
+        <h1>Max's Mnookin Two‑Pager</h1>
+        </br>
       </header>
 
       <section class="section">
         <h2>❤️ Love</h2>
-        <p>I love working on projects that are creative in nature and collaborating with people across different teams (e.g., working with product and design). I also love mentoring junior engineers.</p>
+        <p>I love working on projects that are creative in nature and collaborating with people across different teams
+          (e.g., working with product and design). I also love mentoring junior engineers.</p>
       </section>
 
       <section class="section">
         <h2>😤 Hate</h2>
-        <p>I hate the feeling that what I’m actively working on isn’t bringing value or isn’t being used. I want my tech out in the hands of people, making a real impact on the business and the wider environment.</p>
+        <p>I hate the feeling that what I’m actively working on isn’t bringing value or isn’t being used. I want my tech
+          out in the hands of people, making a real impact on the business and the wider environment.</p>
       </section>
 
       <section class="section">
-        <h2>✅ Must‑Haves <span class="pill" aria-hidden="true">job requirements</span></h2>
+        <h2>✅ I would like</h2>
         <ul>
-          <li>If the job requires onsite or hybrid work, I’d like it to be easily commutable and flexible with start/end times.</li>
+          <li>If the job requires onsite or hybrid work, I’d like it to be easily commutable and flexible with start/end
+            times.</li>
           <li>A leadership team I can talk to honestly, with clear avenues for growth and career progression.</li>
         </ul>
       </section>
 
       <section class="section">
-        <h2>🚫 Must‑Nots <span class="pill" aria-hidden="true">avoid</span></h2>
+        <h2>🚫 I would <u>not</u> like</h2>
         <ul>
           <li>Long commutes stuck in traffic.</li>
           <li>Completely siloed teams (e.g., frontend-only without cross-functional collaboration).</li>
@@ -138,15 +178,21 @@
         <h2>🎯 Career Goals</h2>
         <ul>
           <li><strong>Short‑Term (1–2 years):</strong> Build something useful and continue mentoring.</li>
-          <li><strong>Long‑Term (5+ years):</strong> Become an engineering manager and shape engineering culture or processes.</li>
+          <li><strong>Long‑Term (5+ years):</strong> Become an engineering manager and shape engineering culture or
+            processes.</li>
         </ul>
       </section>
 
       <section class="section">
-        <h2>🌟 Candidate–Market Fit Summary <span class="pill" aria-hidden="true">optional</span></h2>
-        <p>Frontend developer with backend experience and over 14 years of industry expertise. I specialize in web and mobile development, delivering high-quality, user-focused solutions across diverse platforms. I’m passionate about client engagement, product design, and stakeholder collaboration. My enthusiasm for technology drives a continuous pursuit of innovation, leading to meaningful improvements in user experience and project outcomes.</p>
+        <h2>🌟 Candidate–Market Fit Summary</h2>
+        <p>Frontend developer with backend experience and over 14 years of industry expertise. I specialize in web and
+          mobile development, delivering high-quality, user-focused solutions across diverse platforms. I’m passionate
+          about client engagement, product design, and stakeholder collaboration. My enthusiasm for technology drives a
+          continuous pursuit of innovation, leading to meaningful improvements in user experience and project outcomes.
+        </p>
       </section>
     </article>
   </main>
 </body>
+
 </html>
